@@ -6,7 +6,7 @@ def lambda_handler(event, context):
         visit_count = 0
         
         # dynamodb client
-        dynamodb = boto3.resource("dynamodb")
+        dynamodb = boto3.resource("dynamodb", region_name="us-east-1")
         table_name = "portfolio_views_count"
         
         table = dynamodb.Table(table_name)
