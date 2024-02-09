@@ -40,6 +40,8 @@ def test_lambda_handler(dynamodb):
     # Invoke lambda function
     response = lambda_handler(None, None)
 
+    print(response)
+
     # Parse the response
     data = json.loads(response['body'])
 
