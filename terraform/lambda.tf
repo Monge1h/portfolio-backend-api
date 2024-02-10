@@ -41,7 +41,7 @@ resource "aws_lambda_function" "viewer_count_lambda" {
   s3_bucket = aws_s3_bucket.lambda_bucket.id
   s3_key    = aws_s3_object.lambda_zip.key
 
-  handler = "hello-python.lambda_handler"
+  handler = "viewer_count.lambda_handler"
   runtime = "python3.8"
 
   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
